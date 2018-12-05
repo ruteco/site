@@ -1,0 +1,14 @@
+<nav class="d-flex flex-column flex-1">
+    <div class="d-flex justify-content-center">
+        <h1 class='mb-5'>Ruteco</h1>
+    </div>
+    <ul class=" nav-menu d-flex border border-secondary  justify-content-center row m-0 no-list btn-group p-0">
+        <li *ngFor="let element of navMenu" 
+            
+            class="d-flex align-items-center justify-content-center col-12 col-sm-3 btn btn-link" >
+            <a 
+            routerLinkActive='border border-dark p-2 border-radius-10 '
+            [routerLink]="element.link" >{{element.name}}</a>
+        </li>
+    </ul>
+</nav>
