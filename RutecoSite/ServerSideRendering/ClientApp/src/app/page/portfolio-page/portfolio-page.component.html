@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="d-flex flex-row col-12 mt-5  p-0" *ngFor="let projectInfo of projectInformationBoard">
+        <app-project-information-board 
+        *ngIf="projectInfo.isEven == true" 
+        class="d-flex flex-row-reverse" [projectInfo]="projectInfo"></app-project-information-board>
+        <app-project-information-board 
+        *ngIf="projectInfo.isEven == false" 
+        class="d-flex flex-row " [projectInfo]="projectInfo"></app-project-information-board>
+    </div>
+</div>

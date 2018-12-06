@@ -4,7 +4,7 @@
     min-height: 50px;
 }
 
-app-portfolio, app-about, app-contact-us, app-process {
+app-portfolio, app-about, app-contact-us, app-process,app-project-information-board {
     display: flex;
     flex: 1;
 
@@ -40,7 +40,11 @@ html, body {
     }
  }
 
-
+.paragraph{
+    overflow: auto;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
 
 .no-list{
     list-style: none;

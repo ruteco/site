@@ -1,0 +1,31 @@
+
+        <div class="d-flex flex-column col-4 p-0 ">
+            <div class="d-flex flex-row col-10 mw-100">
+                <img class='img-fluid'  [src]="projectInfo.imageLink" alt="img project">
+            </div>
+            <div class="d-flex flex-row pt-2 col-2 mw-100 ">
+                <a href="projectInfo.siteLinks">{{projectInfo.siteName}}</a>
+            </div>
+        </div>
+        <div class="d-flex flex-column col-8 p-0  ">
+            <div class="d-flex flex-row col-1 mw-100 justify-content-between">
+                <div class="d-flex flex-column">
+                    {{projectInfo.projectName}}
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="projectInfo.projectLink">{{projectInfo.projectName}}</a>
+                </div>
+            </div>
+            <div class="d-flex flex-row col-9 mw-100 ">
+                <div *ngIf="projectInfo.projectDescription.length < maximumLengthText || isShowFullText" class="paragraph ">{{projectInfo.projectDescription}}</div>
+                <div *ngIf="projectInfo.projectDescription.length > maximumLengthText && isShowFullText == false" class="paragraph ">{{projectShortDescription}} <a (click)="getFullText()">More...</a></div>
+            </div>
+            <div class="d-flex row col-2 mw-100 ">
+                <div class="d-flex flex-column  pt-2 ">
+                    Technologies:
+                </div>
+                <div *ngFor="let infoItem of projectInfo.useTechnologies" class="d-flex flex-column align-items-center mr-2 ">
+                    <img [src]="infoItem.path" width="32" height="32" alt="{{infoItem.fullName}}">
+                </div>
+            </div>
+        </div>

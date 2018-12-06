@@ -18,11 +18,11 @@ import { MODULE_COMPONENTS, MODULE_SERVICES, MATERIAL_DESIGN } from './moduleExp
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    // BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    MATERIAL_DESIGN,
-    BrowserAnimationsModule
+    MATERIAL_DESIGN
   ],
   providers: [MODULE_SERVICES],
   bootstrap: [AppComponent]
